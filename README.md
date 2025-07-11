@@ -27,3 +27,28 @@ Forecast stock based on increased demand when milk and bananas sell
 
 In short, if a shopper grabs milk and bananas, the store can reliably expect them to also pick up bread. So it's a great chance to design smarter layouts or marketing strategies.
 
+# Output
+[['banana', 'eggs', 'peanut'], ['banana', 'peanut', 'chicken', 'Bread'], ['milk', 'cooking oil', 'juice', 'Bread', 'banana'], ['chicken', 'banana'], ['eggs', 'banana', 'cooking oil'], ['milk', 'cooking oil', 'eggs'], ['milk', 'cooking oil', 'banana', 'Bread', 'chicken'], ['eggs', 'Bread'], ['banana', 'Bread', 'milk'], ['milk', 'eggs', 'cooking oil']]
+    support               itemsets
+0       0.5                (Bread)
+1       0.7               (banana)
+2       0.3              (chicken)
+3       0.5          (cooking oil)
+4       0.5                 (eggs)
+5       0.5                 (milk)
+6       0.4        (Bread, banana)
+7       0.3          (milk, Bread)
+8       0.3      (chicken, banana)
+9       0.3  (cooking oil, banana)
+10      0.3         (milk, banana)
+11      0.3    (eggs, cooking oil)
+12      0.4    (milk, cooking oil)
+13      0.3  (milk, Bread, banana)
+       antecedents    consequents  support  confidence      lift
+0          (Bread)       (banana)      0.4        0.80  1.142857
+1        (chicken)       (banana)      0.3        1.00  1.428571
+2           (milk)  (cooking oil)      0.4        0.80  1.600000
+3    (cooking oil)         (milk)      0.4        0.80  1.600000
+4    (milk, Bread)       (banana)      0.3        1.00  1.428571
+5   (milk, banana)        (Bread)      0.3        1.00  2.000000
+6  (Bread, banana)         (milk)      0.3        0.75  1.500000
